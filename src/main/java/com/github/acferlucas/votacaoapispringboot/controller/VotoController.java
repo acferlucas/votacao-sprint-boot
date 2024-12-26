@@ -31,6 +31,8 @@ public class VotoController {
     @GetMapping("/{pautaId}/resultado")
     public ResponseEntity<String> calcularResultado(@PathVariable Long pautaId) {
         String resultado = votoService.calcularResultado(pautaId);
+
+
         return ResponseEntity.ok(resultado);
     }
 }
